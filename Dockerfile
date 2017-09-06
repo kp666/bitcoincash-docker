@@ -7,7 +7,7 @@ RUN add-apt-repository ppa:bitcoin-unlimited/bu-ppa
 RUN apt-get update && \
     apt-get install -y bitcoind
 
-RUN bitcoind --version #To know bitcoind versions
+
 
 VOLUME ["/opt/bitcoin"]
 
