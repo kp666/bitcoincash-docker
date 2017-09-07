@@ -3,7 +3,7 @@ MAINTAINER kp <dockerkp@gmail.com>
 
 RUN apt-get update && \
   apt-get install -y software-properties-common
-RUN add-apt-repository ppa:bitcoin-unlimited/bu-ppa
+RUN add-apt-repository ppa:bitcoin-abc/ppa
 RUN apt-get update && \
     apt-get install -y bitcoind
 
