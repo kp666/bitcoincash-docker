@@ -9,11 +9,11 @@ RUN apt-get update && \
 
 
 
-VOLUME ["/opt/bitcoin"]
+VOLUME ["/opt/bitcoinabc"]
 
 EXPOSE 8332
 EXPOSE 8333
 EXPOSE 18332
 EXPOSE 18333
 
-CMD ["/usr/bin/bitcoind", "--conf=/opt/bitcoin/bitcoind.conf", "--printtoconsole"]
+CMD ["/usr/bin/bitcoind", "--conf=/opt/bitcoinabc/bitcoind.conf", "--printtoconsole"]
