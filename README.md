@@ -10,7 +10,7 @@ Example:
 ```
 sudo docker run -it --name=bitcoincash-docker \   
 -v /path/to/local/bitcoincash/dir:/opt/bitcoincash \   
--p 127.0.0.1:8332 kp666/bitcoincash-docker:latest
+-p 127.0.0.1:18332 :8332 kp666/bitcoincash-docker:latest
 ```
 
 **Config file is read from**: `/opt/bitcoincash/bitcoind.conf`, i.e., `/path/to/local/bitcoincash/dir/bitcoind.conf`
