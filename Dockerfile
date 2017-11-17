@@ -3,11 +3,12 @@ MAINTAINER kp <dockerkp@gmail.com>
 
 RUN apt-get update && \
   apt-get install -y software-properties-common
-RUN add-apt-repository ppa:bitcoin-abc/ppa
-RUN apt-get update && \
-    apt-get install -y bitcoind=0.15.0-uahf-zesty2
+RUN apt-get install -y wget
 
-
+RUN wget https://download.bitcoinabc.org/0.16.1/linux/bitcoin-abc-0.16.1-x86_64-linux-gnu.tar.gz
+RUN tar -zvxf  bitcoin-abc-0.16.1-x86_64-linux-gnu.tar.gz
+RUN mv bitcoin-abc-0.16.1 bitcoinabc
+RUN cp bitcoinabc/bin/* /usr/local/bin
 
 VOLUME ["/opt/bitcoinabc"]
 
@@ -16,4 +17,4 @@ EXPOSE 8333
 EXPOSE 18332
 EXPOSE 18333
 
-CMD ["/usr/bin/bitcoind", "--conf=/opt/bitcoinabc/bitcoind.conf", "--printtoconsole"]
+CMD ["bitcoind", "--conf=/opt/bitcoinabc/bitcoind.conf", "--printtoconsole"]
