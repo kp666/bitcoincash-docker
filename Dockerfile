@@ -5,9 +5,9 @@ RUN apt-get update && \
   apt-get install -y software-properties-common
 RUN apt-get install -y wget
 
-RUN wget https://download.bitcoinabc.org/0.16.1/linux/bitcoin-abc-0.16.1-x86_64-linux-gnu.tar.gz
-RUN tar -zvxf  bitcoin-abc-0.16.1-x86_64-linux-gnu.tar.gz
-RUN mv bitcoin-abc-0.16.1 bitcoinabc
+RUN wget https://download.bitcoinabc.org/0.16.2/linux/bitcoin-abc-0.16.2-x86_64-linux-gnu.tar.gz
+RUN tar -zvxf  bitcoin-abc-0.16.2-x86_64-linux-gnu.tar.gz
+RUN mv bitcoin-abc-0.16.2 bitcoinabc
 RUN cp bitcoinabc/bin/* /usr/local/bin
 
 VOLUME ["/opt/bitcoinabc"]
