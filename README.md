@@ -9,15 +9,15 @@ Example:
 
 ```
 sudo docker run -it --name=bitcoincash-docker \   
--v /path/to/local/bitcoincash/dir:/opt/bitcoincash \   
+-v /path/to/local/bitcoincash/dir:/opt/bitcoinabc \   
 -p 127.0.0.1:18332:18332 kp666/bitcoincash-docker:latest
 ```
 
-**Config file is read from**: `/opt/bitcoincash/bitcoind.conf`, i.e., `/path/to/local/bitcoincash/dir/bitcoind.conf`
+**Config file is read from**: `/opt/bitcoinabc/bitcoind.conf`, i.e., `/path/to/local/bitcoincash/dir/bitcoind.conf`
 
 ##Storing of Data
 
-You can store data within `/opt/bitcoincash/data` or any directory within `/opt/bitcoincash`.
+You can store data within `/opt/bitcoinabc/data` or any directory within `/opt/bitcoinabc`.
 
 This will inturn store your data within `/path/to/local/bitcoincash/dir` described above. 
 
@@ -33,11 +33,11 @@ mkdir -p /var/bitcoincash
 ln -s /var/bitcoincash /usr/local/bitcoincash/data
 ```
 
-and use `/opt/bitcoincash/data` as your data dir inside the `bitcoind.conf`
+and use `/opt/bitcoinabc/data` as your data dir inside the `bitcoind.conf`
 
 ```
 #bitcoind.conf
-datadir=/opt/bitcoincash/data
+datadir=/opt/bitcoinabc/data
 ```
 
 ##Based on:
